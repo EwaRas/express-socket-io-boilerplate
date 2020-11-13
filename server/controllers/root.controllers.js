@@ -7,7 +7,7 @@ exports.getRoot = async (req, res) => {
   try{
     const data = await '/root getting stuff';
     res.status(200);
-    res.send(data);
+    res.sendFile('/home/ewa/codeworks/express-socket-io-template/client/index.html');
   } catch (error) {
     res.sendStatus(500);
   }

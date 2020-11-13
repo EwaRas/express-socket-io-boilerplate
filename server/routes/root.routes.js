@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const rootController = require('../controllers/root.controllers');
 
@@ -8,5 +8,5 @@ module.exports = (Router) => {
     .get(rootController.getRoot)
     .post(rootController.postRoot);
   return router;
-}
+};
 

@@ -7,11 +7,15 @@
 </head>
   <script src="../socket.io/socket.io.js"></script>
 <body>
-  <h1>Hello</h1>
-  <button>endpoint1</button>
-  <button>endpoint2</button>
+  <h1>ROOT HERE</h1>
+  <a href="">ROOM1</a>
+  <a href="example.html">/example</a>
   <script>
-    const socket = io();
+    const socket = io('http://localhost:3000');
+    socket.emit('clientSayHello', 'Hello from Client');
+    socket.on('onClientSayHello', data => {
+      console.log(`Message from the server: ${data}`);
+    });
    </script>
 </body>
 </html>

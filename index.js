@@ -2,13 +2,12 @@
 
 require('dotenv').config();
 const http = require('http');
-const server = require('./server.js');
-const socket_io = require('socket.io');
-let io;
+const app = require('./app.js');
+const io = require('./server/socket/_io.js');
 
-
-const hostname = process.env.HOST;
-const port = process.env.PORT;
+//TODO CONFIG FROM ENV FILE
+const hostname = process.env.HOST || 'localhost';
+const port = process.env.PORT || 3000;
 
 async function bootstrap () {
     /**
@@ -16,12 +15,12 @@ async function bootstrap () {
    * e.g.
    * await sequelize.authenticate()
    */
-  return http.createServer(server).listen(port);
+  return http.createServer(app).listen(port);
 }
 
 bootstrap()
     .then(server => {
-      io = socket_io(server);
+      io.attach(server);
       console.log(`Server listening at http://${hostname}:${server.address().port}`);
     })
     .catch(error => {
@@ -32,4 +31,3 @@ bootstrap()
       });
     });
 
-module.exports = io;
