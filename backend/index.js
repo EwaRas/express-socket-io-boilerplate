@@ -3,7 +3,7 @@
 require('dotenv').config();
 const http = require('http');
 const app = require('./app.js');
-const io = require('./server/socket/_io.js');
+const io = require('./routes/SOCKET_routes');
 
 //TODO CONFIG FROM ENV FILE
 const hostname = process.env.HOST || 'localhost';
@@ -20,7 +20,13 @@ async function bootstrap () {
 
 bootstrap()
     .then(server => {
-      io.attach(server);
+      io.attach(server, {
+        cors: {
+          origin: "http://localhost:3001",
+          methods: ["GET", "POST"],
+          credentials: true
+        }
+      });
       console.log(`Server listening at http://${hostname}:${server.address().port}`);
     })
     .catch(error => {

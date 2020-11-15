@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express-socket-io-boilerplate</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <nav></nav>
+  <main>
+    <section id="home-section">
+      <h2>You are now connected to the socket.</h2>
+      <p>Your socket id is:<span id="socket-id"></span></p>
+      <h3>Chat</h3>
+      <ul id="chat-list"></ul>
+      <form id="form">
+        <input type="text" id="chat-message">
+        <button id="chat-buttonbutton">send</button>
+      </form>
+    </section>
+    <section id="reading-room-section">
+      <h2>DOCUMENTATION</h2>
+      <p>Blah blah</p>
+    </section>
+  </main>
+  <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+  <script src="socketServices.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

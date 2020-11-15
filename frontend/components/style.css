@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#home-section{
+  background-color: rgb(245, 245, 209);
+  min-height: 100vh;
+}
+
+#reading-room-section{
+  background-color: #b0d66d;
+  min-height: 100vh;
+}

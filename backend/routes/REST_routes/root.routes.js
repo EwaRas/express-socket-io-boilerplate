@@ -1,6 +1,6 @@
 'use strict';
 
-const rootController = require('../controllers/root.controllers');
+const rootController = require('../../controllers/root.controllers');
 
 module.exports = (Router) => {
   const router = Router();
