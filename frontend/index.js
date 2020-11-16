@@ -8,7 +8,6 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 server.use(express.static('components'));
-server.use(express.static('services'));
 
 
 server.listen(port, ()=>{

@@ -7,25 +7,41 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <nav></nav>
+  <header>
+    <h1>EXPRESS-SOCKET.IO-BOILERPLATE</h1>
+    <div class="socket">
+      <div class="circle">
+      </div>
+    </div>
+  </header>
+  <nav>
+    <a href="home-section" id="home-section-link">HOME</a>
+    <a href="documentation" id="documentation-link">DOCUMENTATION</a>
+  </nav>
   <main>
     <section id="home-section">
-      <h2>You are now connected to the socket.</h2>
-      <p>Your socket id is:<span id="socket-id"></span></p>
-      <h3>Chat</h3>
-      <ul id="chat-list"></ul>
-      <form id="form">
-        <input type="text" id="chat-message">
-        <button id="chat-buttonbutton">send</button>
-      </form>
+      <div id="side-panel">
+          <h4>You are now connected to the socket.</h4>
+          <p>Currently connected sockets: <span id="socket-count"></span></p>
+          <p>Your socket id is: <span id="socket-id"></span></p>
+      </div>
+      <div class="chat">
+        <h3>Say something!</h3>
+        <form id="form">
+          <input type="text" id="chat-message">
+          <button id="chat-button">send</button>
+        </form>
+        <ul id="chat-list">
+        </ul>
+      </div>
     </section>
-    <section id="reading-room-section">
+    <section id="documentation">
       <h2>DOCUMENTATION</h2>
       <p>Blah blah</p>
     </section>
   </main>
   <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
-  <script src="socketServices.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
+
