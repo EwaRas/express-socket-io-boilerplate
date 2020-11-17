@@ -57,7 +57,7 @@ function sendMessage (e) {
 // Helper functions
 function goToHomepage (e) {
   e.preventDefault();
-  homeSection.style.width = '100%';
+  homeSection.style.width = '100vw';
   homeSection.style.opacity = '1';
   docsSection.style.width = '0';
   docsSection.style.opacity = '0';
@@ -65,7 +65,7 @@ function goToHomepage (e) {
 
 function goToDocumentation (e) {
   e.preventDefault();
-  docsSection.style.width = '100%';
+  docsSection.style.width = '100vw';
   docsSection.style.opacity = '1';
   homeSection.style.width = '0';
   homeSection.style.opacity = '0';

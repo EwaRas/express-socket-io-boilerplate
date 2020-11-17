@@ -24,11 +24,16 @@ exports.welcomeClient  = (data) => {
 
 exports.sendMessageToClient  = (data, id) => {
   try {
-    const messageCount = getMessageCount(id);
-    const message = messageModel.chatMessages[messageCount];
+    if (userModel.main_room.length === 1) {
+      const messageCount = getMessageCount(id);
+      const message = messageModel.chatMessages[messageCount];
+      return {
+        message: message,
+        sender: 'server'
+      };
+    }
     return {
-      message: message,
-      sender: 'server'
+      message: data
     };
   } catch (error) {
     console.error(error);
