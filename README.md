@@ -24,7 +24,7 @@ Command to create an express and socket.io boilerplate in the current directory:
 
 ### Folder Structure
 The express-socket-io-boilerplate generates the following folder structure:
-
+```bash
 └── application_directory
     ├── public
     |   ├── index.html
@@ -50,7 +50,7 @@ The express-socket-io-boilerplate generates the following folder structure:
     |   |       └── message.models.js
     ├── package.json
     └── .git
-
+```
 ### Commands
 
 From the server directory run nodemon to start the server.
