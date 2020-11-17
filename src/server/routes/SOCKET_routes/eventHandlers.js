@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const messageModel = require('../../models/message.models');
 const userModel = require('../../models/user.models');
@@ -9,21 +9,21 @@ exports.addToDB = (id) => {
   try {
     return addUser(id);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-}
+};
 
 exports.welcomeClient  = (data) => {
   try {
     const message = messageModel.welcomeMessage;
     return { message: message, sender: 'server' };
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-}
+};
 
 exports.sendMessageToClient  = (data, id) => {
-  try{
+  try {
     const messageCount = getMessageCount(id);
     const message = messageModel.chatMessages[messageCount];
     return {
@@ -31,14 +31,14 @@ exports.sendMessageToClient  = (data, id) => {
       sender: 'server'
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-}
+};
 
 exports.onClientDisconnect = (id) => {
   const updatedClientList = removeUser(id);
   return updatedClientList;
-}
+};
 
 //Helper functions
 
@@ -47,7 +47,7 @@ function addUser (id) {
   return userModel.main_room;
 }
 
-function removeUser(id) {
+function removeUser (id) {
   let index = userModel.main_room.map(el => el.id).indexOf(id);
   userModel.main_room.splice(index, 1);
   return userModel.main_room;
@@ -59,6 +59,6 @@ function getMessageCount (id) {
   console.log(user);
   const messageCount = user.messageCount;
   messageCount < length - 1
-        ? user.messageCount++ : user.messageCount;
+    ? user.messageCount++ : user.messageCount;
   return messageCount;
 }

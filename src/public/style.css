@@ -1,0 +1,300 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 248, 242);
+}
+
+header {
+  display: flex;
+  padding: 3em;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px -1px rgba(7, 7, 7, 0.2);
+}
+
+header h1{
+  margin-left: auto;
+  color: black;
+  animation: animateTextColor 10s linear infinite;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+nav>a {
+  text-decoration: none;
+  background-color: yellow;
+  padding: .75em 2em;
+  margin: .5em 1em;
+  border-radius: 20px;
+  background-color:black;
+  color: rgb(248, 248, 242);
+  font-weight: 900;
+}
+main {
+  flex-grow: 1;
+  align-self: stretch;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  flex-grow: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgb(248, 248, 242);
+}
+
+#home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 1;
+}
+
+#side-panel {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  left: 0;
+  width: 100%;
+  margin: 1em auto;
+  font-size: .8em;
+  box-shadow: 0 2px 10px -1px rgba(7, 7, 7, 0.2);
+  animation: slideInPanel 1s ease-out, animateBackgroundColor 10s linear infinite;
+}
+.text-wrapper{
+  margin: 0 auto;
+  padding: 1.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+#side-panel>p {
+  font-size: 90%;
+}
+
+#socket-id {
+  font-size: 85%;
+}
+.socket {
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.circle {
+  box-sizing: border-box;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border-color: black;
+  border-width: .5em;
+  border-style: solid;
+  transform: scale(1);
+  animation: animateLogo 10s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle.small{
+  width: 2em;
+  height: 2em;
+}
+
+.chat {
+  box-sizing: border-box;
+  width: 65%;
+  height: 80%;
+  margin-bottom: 0;
+  background-color: rgb(248, 248, 242);
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  box-shadow: 0 2px 10px -1px rgba(7, 7, 7, 0.2);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: 1em;
+}
+
+.chat h3 {
+  text-align: center;
+  padding: 1em;
+  color: white;
+  box-shadow: 0 2px 10px -1px  rgba(7, 7, 7, 0.2);
+  animation: animateTextColor 10s linear infinite;
+}
+
+.form-wrapper {
+  box-shadow: 0 2px 10px -1px  rgba(7, 7, 7, 0.2);
+}
+
+#form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  border-radius: 50%;
+  background-color: rgb(248, 248, 242);
+}
+
+#chat-message {
+  flex-grow:1;
+  padding: .5em 1em;
+  border: none;
+  background-color: inherit;
+}
+
+#chat-message:focus{
+  outline: none;
+}
+
+#chat-button {
+  border: none;
+  padding: 1em 2em;
+  background-color: transparent;
+
+}
+
+.fa {
+  color:black;
+  animation: animateTextColor 10s linear infinite;
+}
+
+#documentation {
+  width: 0;
+  opacity: 0;
+  background-color: rgb(248, 248, 242);
+  padding: 2em;
+}
+
+.doc-wrapper{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
+
+.doc-wrapper p{
+  padding: .5em;
+}
+
+.doc-wrapper h3{
+  margin: 1em 0;
+}
+
+.doc-wrapper a{
+  font-weight: bold;
+  color: purple;
+}
+
+.doc-wrapper img{
+  margin-left: 2em;
+  box-shadow: 0 2px 10px -1px  rgba(7, 7, 7, 0.2);
+}
+#chat-list {
+  box-sizing: border-box;
+  flex-grow: 1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.list-item {
+  display: inline-block;
+  max-width: 70%;
+  font-size: 90%;
+  padding: 1em;
+  margin-bottom: 1rem;
+  background-color:rgb(109, 109, 109);
+  color: white;
+  box-shadow: 0 2px 10px -1px #3333;
+  opacity: 0;
+  transition: opacity 2s, height 2s;
+  height: 0;
+}
+
+.list-item:last-child {
+  margin-bottom: .2em;
+}
+
+.left {
+  margin-left: 0;
+  margin-right: auto;
+  opacity: 1;
+  height: auto;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.right {
+  margin-left: auto;
+  margin-right: 0;
+  opacity: 1;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+@keyframes animateLogo {
+  0% {border-color:black;
+      transform: scale(1)
+      }
+  20% {border-color: rgb(212, 0, 255);
+      transform: scale(.96)}
+  40% {border-color: rgb(20, 136, 245);
+      transform: scale(.92)}
+  60% {border-color: orange;
+      transform: scale(.9)}
+  80% {border-color: green;
+      transform: scale(.96)}
+  100% {border-color:black;
+        transform: scale(1)}
+}
+
+@keyframes slideInPanel{
+  0% {left:-100%}
+  100% {left: 0}
+}
+
+@keyframes animateTextColor {
+  0% {color:black}
+  20% {color: rgb(212, 0, 255)}
+  40% {color: rgb(20, 136, 245)}
+  60% {color: orange}
+  80% {color: green}
+  100% {color:black}
+}
+
+@keyframes animateBackgroundColor {
+  0% {background-color:black}
+  20% {background-color: rgb(212, 0, 255)}
+  40% {background-color: rgb(20, 136, 245)}
+  60% {background-color: orange}
+  80% {background-color: green}
+  100% {background-color:black}
+}

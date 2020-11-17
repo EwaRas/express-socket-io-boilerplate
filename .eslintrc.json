@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": ["json"],
+  "rules": {
+    // Add here all the extra rules based on the developer preferences
+    "indent": ["error", 2],
+    "keyword-spacing": "error",
+    "linebreak-style": "error",
+    "quotes": ["error","single"],
+    "semi": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": "error"
+  }
+}

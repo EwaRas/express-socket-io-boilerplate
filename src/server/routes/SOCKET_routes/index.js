@@ -9,16 +9,16 @@ io.on('connection', (socket) => {
 
   //THIS IS STRANGE!!!!!!! >>> EMIT && BROADCAST EMIT NEEDED FOR IT TO WORK AS EXPECTED
   socket.on('/root/new_socket_connected', (data) => {
-      const { message, sender } = eventHandlers.welcomeClient(data);
-      const clientCount = connectedClients();
-      socket.emit('/root/welcome',  {message, sender, id: socket.id});
-      socket.emit('root/update_socket_count', { clientCount });
-      socket.broadcast.emit('root/update_socket_count', { clientCount });
+    const { message, sender } = eventHandlers.welcomeClient(data);
+    const clientCount = connectedClients();
+    socket.emit('/root/welcome',  {message, sender, id: socket.id});
+    socket.emit('root/update_socket_count', { clientCount });
+    socket.broadcast.emit('root/update_socket_count', { clientCount });
   });
 
   socket.on('/root/new_message', (data) => {
-      const message = eventHandlers.sendMessageToClient(data, socket.id);
-      socket.emit('/root/update_chat', message);
+    const message = eventHandlers.sendMessageToClient(data, socket.id);
+    socket.emit('/root/update_chat', message);
   });
 
   socket.on('disconnect', () => {

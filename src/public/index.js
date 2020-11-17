@@ -20,19 +20,19 @@ socket.on('root/update_socket_count', updateSocketCount);
 socket.on('/root/update_chat', addMessage);
 
 // Socket event handlers
-function addMessage(data) {
+function addMessage (data) {
   const { message, sender } =  data;
   const text = document.createTextNode(message);
   const listItem = document.createElement('li');
   sender === 'user'
-            ? listItem.classList.add('list-item', 'right')
-            : listItem.classList.add('list-item', 'left');
+    ? listItem.classList.add('list-item', 'right')
+    : listItem.classList.add('list-item', 'left');
   const chat = document.getElementById('chat-list');
   listItem.appendChild(text);
   sender === 'user'
-            ? setTimeout(() => chat.appendChild(listItem), 200)
-            : setTimeout(() => chat.appendChild(listItem), 1000)
-};
+    ? setTimeout(() => chat.appendChild(listItem), 200)
+    : setTimeout(() => chat.appendChild(listItem), 1000);
+}
 
 function welcomeUser (data) {
   const { message, sender, id } = data;
@@ -40,11 +40,9 @@ function welcomeUser (data) {
   clientId.innerHTML = id;
 }
 
-function updateSocketCount (data){
-
+function updateSocketCount (data) {
   const { clientCount } = data;
   socketCount.innerHTML = clientCount;
-
 }
 
 // Sends a chat message to the server
@@ -52,7 +50,7 @@ function sendMessage (e) {
   e.preventDefault();
   const value = input.value;
   addMessage({message: value, sender: 'user'});
-  input.value = "";
+  input.value = '';
   socket.emit('/root/new_message', value);
 }
 
@@ -70,7 +68,7 @@ function goToDocumentation (e) {
   docsSection.style.width = '100%';
   docsSection.style.opacity = '1';
   homeSection.style.width = '0';
-  homeSection.style.opacity = '1';
+  homeSection.style.opacity = '0';
 }
 
 // Reactive elements > Event listeners

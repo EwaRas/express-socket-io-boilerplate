@@ -1,4 +1,0 @@
-{
-  "watch": ["components/", "services/", "utilities/" ],
-  "ext": "js,css,html"
-}

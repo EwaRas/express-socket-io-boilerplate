@@ -1,11 +1,9 @@
 'use strict'
 
-require('dotenv').config();
 const http = require('http');
 const app = require('./app.js');
 const io = require('./routes/SOCKET_routes');
 
-//TODO CONFIG FROM ENV FILE
 const hostname = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3000;
 
@@ -22,7 +20,7 @@ bootstrap()
     .then(server => {
       io.attach(server, {
         cors: {
-          origin: "http://localhost:3001",
+          origin: "http://localhost:3000",
           methods: ["GET", "POST"],
           credentials: true
         }
