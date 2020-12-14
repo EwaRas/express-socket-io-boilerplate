@@ -27,6 +27,7 @@ function addMessage (data) {
   sender === 'user'
     ? listItem.classList.add('list-item', 'right')
     : listItem.classList.add('list-item', 'left');
+  listItem.style.backgroundColor = `rgba(${randomColor()},${randomColor()},${randomColor()}, .5)`;
   const chat = document.getElementById('chat-list');
   listItem.appendChild(text);
   sender === 'user'
@@ -69,6 +70,10 @@ function goToDocumentation (e) {
   docsSection.style.opacity = '1';
   homeSection.style.width = '0';
   homeSection.style.opacity = '0';
+}
+
+function randomColor () {
+  return Math.floor(Math.random()*255);
 }
 
 // Reactive elements > Event listeners

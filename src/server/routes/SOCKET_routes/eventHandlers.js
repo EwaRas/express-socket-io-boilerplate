@@ -61,7 +61,6 @@ function removeUser (id) {
 function getMessageCount (id) {
   const length = messageModel.chatMessages.length;
   const user = userModel.main_room.find(el => el.id === id);
-  console.log(user);
   const messageCount = user.messageCount;
   messageCount < length - 1
     ? user.messageCount++ : user.messageCount;

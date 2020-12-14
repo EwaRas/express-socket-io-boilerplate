@@ -10,7 +10,7 @@
     "prettier": "npx prettier --write ."
   },
   "bin": {
-    "express-socket-io-boilerplate": "./bin/createBoilerplate.js"
+    "create-express-socket-io-boilerplate": "./bin/createBoilerplate.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "cors": "^2.8.5",
-    "debug": "^4.2.0",
     "express": "^4.17.1",
     "fs-extra": "^9.0.1",
     "shelljs": "^0.8.4",
