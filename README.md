@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A CLI to quickly create a basic set-up for applications using Express and Socket.io
+An open-source npm package to quickly create a basic set-up for applications using Express and Socket.io
 
 The backend is based on NodeJS with [express](https://www.npmjs.com/package/express) and [socket.io](https://www.npmjs.com/package/socket.io).
 
@@ -45,9 +45,9 @@ The express-socket-io-boilerplate generates the following folder structure:
     |   ├── controllers
     |   |       ├── user.controllers.js
     |   |       └── message.controllers.js
-    |   ├── models
-    |   |       ├── user.models.js
-    |   |       └── message.models.js
+    |   └── models
+    |           ├── user.models.js
+    |           └── message.models.js
     ├── package.json
     └── .git
 ```
