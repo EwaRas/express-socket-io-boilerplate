@@ -1,6 +1,6 @@
 {
   "name": "express-socket-io-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic boilerplate for Express & Socket.io applications",
   "main": "./src/server/index.js",
   "scripts": {
