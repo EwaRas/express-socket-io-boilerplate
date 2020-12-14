@@ -16,4 +16,4 @@ if (args.length > 0) {
   appName = 'express-socket-io-boilerplate';
 }
 
-createBoilerplate.buildBoilerplate(appName, callerPath);
+createBoilerplate(appName, callerPath);

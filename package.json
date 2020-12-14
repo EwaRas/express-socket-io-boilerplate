@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/EwaRas/express-socket-io-boilerplate/issues"
   },
-  "homepage": "https://github.com/EwaRas/express-socket-io-boilerplate#readme",
+  "homepage": "https://github.com/EwaRas/express-socket-io-boilerplate",
   "dependencies": {
     "chalk": "^4.1.0",
     "cors": "^2.8.5",
