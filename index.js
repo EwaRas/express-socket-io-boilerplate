@@ -21,7 +21,7 @@ async function buildBoilerplate (appName, path) {
   log(chalk.blueBright(`Creating a package.json for your ${appName} project...`));
   await shell.exec(`npm init -y`);
   log(chalk.green('Downloading dependencies: express,cors, socket.io, socket.io-client, nodemon'));
-  await shell.exec(`npm i express, cors, socket.io, socket.io-client, nodemon...`);
+  await shell.exec(`npm i express cors socket.io socket.io-client nodemon`);
   log(chalk.red('Initializing git...'));
   await shell.exec(`git init`);
 }

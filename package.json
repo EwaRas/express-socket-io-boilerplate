@@ -1,8 +1,8 @@
 {
   "name": "express-socket-io-boilerplate",
   "version": "1.0.0",
-  "description": "Basic boilerplate for Express socket.io",
-  "main": "./server/index.js",
+  "description": "Basic boilerplate for Express & Socket.io applications",
+  "main": "./src/server/index.js",
   "scripts": {
     "check": "npm run lint",
     "test": "mocha",
@@ -43,10 +43,5 @@
     "mocha": "^8.1.3",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1"
-  },
-  "files": [
-    "bin/",
-    "src/",
-    "index.js"
-  ]
+  }
 }
