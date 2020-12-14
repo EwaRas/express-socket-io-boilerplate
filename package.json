@@ -44,5 +44,5 @@
     "nodemon": "^2.0.6",
     "prettier": "^2.1.2"
   },
-  "files": ["bin", "src"]
+  "files": ["bin/", "src/", "index.js"]
 }
