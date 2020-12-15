@@ -28,6 +28,13 @@ Command to create an express and socket.io boilerplate in the current directory:
 create-express-socket-io-boilerplate PROJECT_DIRECTORY_NAME
 ```
 
+## Start the server:
+
+To start the server, from the server directory, run:
+```bash
+nodemon
+```
+
 ### Folder Structure
 The express-socket-io-boilerplate generates the following folder structure:
 ```bash
@@ -57,13 +64,8 @@ The express-socket-io-boilerplate generates the following folder structure:
     ├── package.json
     └── .git
 ```
-## Start the server
 
-To start the server, from the server directory run:
-```bash
-nodemon
-```
-## NPM LINK:
+### NPM link:
 <a target="_blank">https://www.npmjs.com/package/express-socket-io-boilerplate</a>
 
 
