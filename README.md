@@ -25,7 +25,7 @@ The package installs the required folder structure along with package.json, depe
 
 Command to create an express and socket.io boilerplate in the current directory: 
 ```bash
-$ express-socket-io-boilerplate PROJECT_DIRECTORY_NAME
+express-socket-io-boilerplate PROJECT_DIRECTORY_NAME
 ```
 
 ### Folder Structure
