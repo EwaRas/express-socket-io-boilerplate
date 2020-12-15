@@ -59,4 +59,7 @@ The express-socket-io-boilerplate generates the following folder structure:
 ```
 ### Commands
 
-From the server directory run nodemon to start the server.
+To start the server, from the server directory run:
+```bash
+nodemon
+```
