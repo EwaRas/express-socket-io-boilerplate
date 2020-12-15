@@ -15,13 +15,18 @@ Node v7.6.0 or higher for ES2015 and async function support.
 ## Installation
 
 To make the package available in the shell as standalone command, it requires a global installation:
+```bash
 npm install -g express-socket-io-boilerplate
+```
 
 ## Getting Started
 
 The package installs the required folder structure along with package.json, dependencies and an empty git repository.
 
-Command to create an express and socket.io boilerplate in the current directory: express-socket-io-boilerplate PROJECT_DIRECTORY_NAME
+Command to create an express and socket.io boilerplate in the current directory: 
+```bash
+$ express-socket-io-boilerplate PROJECT_DIRECTORY_NAME
+```
 
 ### Folder Structure
 The express-socket-io-boilerplate generates the following folder structure:
