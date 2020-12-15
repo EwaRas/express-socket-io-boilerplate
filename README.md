@@ -57,9 +57,14 @@ The express-socket-io-boilerplate generates the following folder structure:
     ├── package.json
     └── .git
 ```
-### Commands
+## Start the server
 
 To start the server, from the server directory run:
 ```bash
 nodemon
 ```
+## NPM LINK:
+<a target="_blank">https://www.npmjs.com/package/express-socket-io-boilerplate</a>
+
+
+
