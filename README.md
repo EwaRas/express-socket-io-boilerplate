@@ -4,9 +4,9 @@
 
 An open-source npm package to quickly create a basic set-up for applications using Express and Socket.io
 
-The backend is based on NodeJS with [express](https://www.npmjs.com/package/express) and [socket.io](https://www.npmjs.com/package/socket.io).
+The backend is based on NodeJS with [Express](https://www.npmjs.com/package/express) and [Socket.io](https://www.npmjs.com/package/socket.io).
 
-The frontend consists of a simple landing page with HTML, CSS and JS and [socket.io-client](https://www.npmjs.com/package/socket.io-client).
+The frontend consists of a simple landing page with HTML, CSS and JS and [Socket.io-client](https://www.npmjs.com/package/socket.io-client).
 
 ## Requirements
 
